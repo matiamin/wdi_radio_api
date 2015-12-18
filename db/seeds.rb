@@ -28,3 +28,6 @@ artists.each do |artist|
     })
   end
 end
+User.destroy_all
+User.create!(email:'barb@example.com', password:'welcome123')
+User.create!(email:'bob@example.com', password:'welcome123')

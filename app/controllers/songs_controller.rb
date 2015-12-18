@@ -1,4 +1,5 @@
 class SongsController < ApplicationController
+  before_action :authenticate_user!
   def index
     @songs = Song.all.order(:artist, :album_art)
     render status: 200, json: @songs.to_json
